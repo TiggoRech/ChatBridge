@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '6.0.+'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+group = "com.tiggo"
+version = "1.0.0"
+
+base {
+    archivesName = "tr_baritone-chatbridge"
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net' }
+}
+
+minecraft {
+    // Mappings oficiais MC 1.20.1
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory file('run')
+            property 'forge.logging.console.level', 'info'
+            mods {
+                tr_baritone_chatbridge {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    // NÃO adicione net.minecraft:client manualmente
+    minecraft "net.minecraftforge:forge:1.20.1-47.3.0"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// Removido o bloco "jar" duplicado — o Gradle já inclui src/main/resources automaticamente

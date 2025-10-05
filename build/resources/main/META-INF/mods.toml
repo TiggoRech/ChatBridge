@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="LGPL-3.0-or-later"
+
+[[mods]]
+modId="tr_baritone_chatbridge"
+version="1.0.0"
+displayName="TR Baritone ChatBridge"
+description='''
+Escuta o chat do cliente e converte "<BotName> !comando" (somente do Owner)
+em comandos # do Baritone.
+Configuração: config/tr_baritone_chatbridge.toml
+'''
