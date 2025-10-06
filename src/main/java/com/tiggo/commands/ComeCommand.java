@@ -1,19 +1,19 @@
-package com.tiggo.trbaritonechatbridge.commands;
+package com.tiggo.chatbridge.commands;
 
-import com.tiggo.trbaritonechatbridge.baritone.BaritoneService;
-import com.tiggo.trbaritonechatbridge.chat.DialogueService;
-import com.tiggo.trbaritonechatbridge.config.TrChatConfig;
-import com.tiggo.trbaritonechatbridge.core.Command;
-import com.tiggo.trbaritonechatbridge.core.MoodService;
+import com.tiggo.chatbridge.baritone.BaritoneService;
+import com.tiggo.chatbridge.chat.DialogueService;
+import com.tiggo.chatbridge.config.TrChatConfig;
+import com.tiggo.chatbridge.core.Command;
+import com.tiggo.chatbridge.core.MoodService;
 import net.minecraft.client.Minecraft;
 
 public class ComeCommand implements Command {
     private final BaritoneService baritone;
     private final DialogueService dialogue;
     private final MoodService mood;
-    private final com.tiggo.trbaritonechatbridge.util.Delay delay;
+    private final com.tiggo.chatbridge.util.Delay delay;
 
-    public ComeCommand(BaritoneService baritone, DialogueService dialogue, com.tiggo.trbaritonechatbridge.util.Delay delay, MoodService mood) {
+    public ComeCommand(BaritoneService baritone, DialogueService dialogue, com.tiggo.chatbridge.util.Delay delay, MoodService mood) {
         this.baritone = baritone;
         this.dialogue = dialogue;
         this.delay = delay;

@@ -1,4 +1,4 @@
-package com.tiggo.trbaritonechatbridge.baritone;
+package com.tiggo.chatbridge.baritone;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

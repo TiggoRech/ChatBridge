@@ -1,4 +1,4 @@
-package com.tiggo.trbaritonechatbridge.config;
+package com.tiggo.chatbridge.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.loading.FMLPaths;

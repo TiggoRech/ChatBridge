@@ -19,6 +19,9 @@ base {
 repositories {
     mavenCentral()
     maven { url = 'https://maven.minecraftforge.net' }
+
+    // opcional – não é necessário com fileTree, mas não atrapalha
+    flatDir { dirs 'libs' }
 }
 
 minecraft {
@@ -39,12 +42,26 @@ minecraft {
 }
 
 dependencies {
-    // NÃO adicione net.minecraft:client manualmente
+    // Forge
     minecraft "net.minecraftforge:forge:1.20.1-47.3.0"
+
+    // === Baritone (captura qualquer nome de arquivo em libs/) ===
+    // API para compilar: qualquer jar que comece com baritone-api
+    implementation fg.deobf(fileTree(dir: 'libs', include: [
+        'baritone-api*.jar',         // ex.: baritone-api-1.10.3.jar, baritone-api-forge-*.jar
+        'baritone-forge-api*.jar'    // fallback se seu arquivo tiver prefixo invertido
+    ]))
+
+    // Runtime: qualquer baritone*.jar que NÃO contenha "api" no nome
+    runtimeOnly fg.deobf(fileTree(dir: 'libs', include: [
+        'baritone*.jar'              // ex.: baritone-standalone-forge-*.jar, baritone-*.jar
+    ], exclude: [
+        '*api*.jar'                  // evita puxar o api como runtime
+    ]))
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-// Removido o bloco "jar" duplicado — o Gradle já inclui src/main/resources automaticamente
+// Gradle já inclui src/main/resources no jar automaticamente

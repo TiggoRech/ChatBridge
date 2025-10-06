@@ -1,4 +1,4 @@
-package com.tiggo.trbaritonechatbridge.baritone;
+package com.tiggo.chatbridge.baritone;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.client.Minecraft;

@@ -1,4 +1,4 @@
-package com.tiggo.trbaritonechatbridge.chat;
+package com.tiggo.chatbridge.chat;
 
 import java.util.List;
 import java.util.Random;

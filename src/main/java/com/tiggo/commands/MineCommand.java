@@ -1,11 +1,11 @@
-package com.tiggo.trbaritonechatbridge.commands;
+package com.tiggo.chatbridge.commands;
 
-import com.tiggo.trbaritonechatbridge.baritone.BaritoneService;
-import com.tiggo.trbaritonechatbridge.chat.DialogueService;
-import com.tiggo.trbaritonechatbridge.config.TrChatConfig;
-import com.tiggo.trbaritonechatbridge.core.Command;
-import com.tiggo.trbaritonechatbridge.core.MoodService;
-import com.tiggo.trbaritonechatbridge.util.Delay;
+import com.tiggo.chatbridge.baritone.BaritoneService;
+import com.tiggo.chatbridge.chat.DialogueService;
+import com.tiggo.chatbridge.config.TrChatConfig;
+import com.tiggo.chatbridge.core.Command;
+import com.tiggo.chatbridge.core.MoodService;
+import com.tiggo.chatbridge.util.Delay;
 import net.minecraft.client.Minecraft;
 
 import java.util.Random;

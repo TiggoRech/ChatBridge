@@ -1,6 +1,6 @@
-package com.tiggo.trbaritonechatbridge.chat;
+package com.tiggo.chatbridge.chat;
 
-import com.tiggo.trbaritonechatbridge.config.TrChatConfig;
+import com.tiggo.chatbridge.config.TrChatConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;

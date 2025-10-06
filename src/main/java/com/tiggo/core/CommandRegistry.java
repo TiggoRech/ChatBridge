@@ -1,6 +1,6 @@
-package com.tiggo.trbaritonechatbridge.core;
+package com.tiggo.chatbridge.core;
 
-import com.tiggo.trbaritonechatbridge.baritone.BaritoneService;
+import com.tiggo.chatbridge.baritone.BaritoneService;
 import net.minecraft.client.Minecraft;
 
 import java.util.ArrayList;

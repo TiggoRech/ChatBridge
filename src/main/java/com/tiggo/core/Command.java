@@ -1,4 +1,4 @@
-package com.tiggo.trbaritonechatbridge.core;
+package com.tiggo.chatbridge.core;
 
 import net.minecraft.client.Minecraft;
 

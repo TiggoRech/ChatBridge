@@ -1,13 +1,41 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[47,)"             # Forge 47.x = MC 1.20.1
 license="LGPL-3.0-or-later"
 
 [[mods]]
-modId="tr_baritone_chatbridge"
+modId="tr_baritone_chatbridge"    # mesmo ID usado no @Mod(...)
 version="1.0.0"
 displayName="TR Baritone ChatBridge"
-description='''
-Escuta o chat do cliente e converte "<BotName> !comando" (somente do Owner)
+# logoFile="assets/tr_baritone_chatbridge/icon.png"
+# credits=""
+# authors="TiggoRech"
+description='''Escuta o chat do cliente e converte "<BotName> !comando" (somente do Owner)
 em comandos # do Baritone.
 Configuração: config/tr_baritone_chatbridge.toml
 '''
+
+# --- Dependências essenciais ---
+[[dependencies.tr_baritone_chatbridge]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.tr_baritone_chatbridge]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="CLIENT"
+
+# --- Baritone (standalone) ---
+# O standalone não expõe um modId que o Forge reconheça de forma confiável.
+# Para evitar falso-positivo de "baritone não instalado", NÃO marque como mandatory.
+# O JAR já estando em /mods, as classes estarão disponíveis.
+[[dependencies.tr_baritone_chatbridge]]
+    modId="baritone"
+    mandatory=false
+    versionRange="[1.10.3,)"
+    ordering="NONE"
+    side="CLIENT"
